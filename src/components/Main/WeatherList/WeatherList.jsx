@@ -51,9 +51,11 @@ const WeatherList = () => {
         <input name="location" placeholder='Ciudad, País' />
         <button type="submit">Buscar</button>
       </form>
-      
+
 
       {loading && <p>Cargando...</p>}
+
+      <h4>El tiempo en {city.toUpperCase()}</h4>
 
       {forecastData.length !== 0 ? (
         <div className='weather-list'>
