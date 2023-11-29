@@ -1,7 +1,11 @@
 import React from "react";
+import WeatherList from "./WeatherList";
 
 const Main = () => {
-  return <div>Main</div>;
+  return (
+  <main>
+    <WeatherList/>
+  </main>)
 };
 
 export default Main;
