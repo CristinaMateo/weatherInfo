@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import WeatherCard from "./WeatherCard";
-import { v4 as uuidv4 } from 'uuid';
+
 
 const WeatherList = () => {
   const [city, setCity] = useState("Madrid");
@@ -51,6 +51,7 @@ const WeatherList = () => {
         <input name="location" placeholder='Ciudad, País' />
         <button type="submit">Buscar</button>
       </form>
+      
 
       {loading && <p>Cargando...</p>}
 
