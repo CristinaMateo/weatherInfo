@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import WeatherCard from "./WeatherCard";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const WeatherList = () => {
   const [city, setCity] = useState("Madrid");
@@ -12,7 +12,7 @@ const WeatherList = () => {
     async function fetchData() {
       setLoading(true);
       try {
-        const forecastRes = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${import.meta.env.VITE_WEATHER_API_KEY}`);
+        const forecastRes = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=5111179d8b863c7c9d6d5b977a924b21`);
         const forecastJson = forecastRes.data;
 
         // Procesar los datos del pronóstico extendido
@@ -46,17 +46,14 @@ const WeatherList = () => {
 
   return (
     <section>
-      <h4>Búsqueda por ubicación</h4>
       <form onSubmit={handleSubmit}>
         <input name="location" placeholder='Ciudad, País' />
+        <br />
         <button type="submit">Buscar</button>
       </form>
 
-
       {loading && <p>Cargando...</p>}
-
-      <h4>El tiempo en {city.toUpperCase()}</h4>
-
+      <h4>El tiempo en {city.toUpperCase()} en los próximos 5 días:</h4>
       {forecastData.length !== 0 ? (
         <div className='weather-list'>
           {forecastData.map((data, index) => (
