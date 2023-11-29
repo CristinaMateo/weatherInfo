@@ -12,7 +12,7 @@ const WeatherList = () => {
     async function fetchData() {
       setLoading(true);
       try {
-        const forecastRes = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=5111179d8b863c7c9d6d5b977a924b21`);
+        const forecastRes = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${import.meta.env.VITE_WEATHER_API_KEY}`);
         const forecastJson = forecastRes.data;
 
         // Procesar los datos del pronóstico extendido
