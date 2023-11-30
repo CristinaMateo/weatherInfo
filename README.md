@@ -12,3 +12,6 @@ Currently, two official plugins are available:
 https://yourweatherinfobycris.netlify.app/
 
 On this website you can search for a city and see the weather forecast for the next five days, divided in five time-frames. Temperature, weather and wind are showed.
+
+
+![First look](./public/assets/weatherInfo.png)
