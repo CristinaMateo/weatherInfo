@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 const WeatherList = () => {
   const [city, setCity] = useState("Madrid");
   const [forecastData, setForecastData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); //no hace falta, ver demo
 
   useEffect(() => {
     async function fetchData() {
