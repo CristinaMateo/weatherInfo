@@ -15,6 +15,8 @@ Vamos a practicar useEffect y asincronía con React
 ### Flujo de esta vista:
 En esta vista se mostrará por defecto el pronóstico extendido de Madrid. Al introducir una nueva ciudad en el input de tipo texto y hacer click en el botón, la información se actualizará con los datos correspondientes a la ciudad buscada.
 
+![First look](./public/assets/weatherInfo.png)
+
 ---
 
 # React + Vite
