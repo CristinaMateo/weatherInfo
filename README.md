@@ -2,7 +2,7 @@
 
 # Weather Info
 
-https://yourweatherinfobycris.netlify.app/
+[Visit web site](https://yourweatherinfobycris.netlify.app/)
 
 On this website you can search for a city and see the weather forecast for the next five days, divided in five time-frames. Temperature, weather and wind are showed.
 
